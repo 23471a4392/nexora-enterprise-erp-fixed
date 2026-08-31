@@ -76,3 +76,4 @@ function del(k,i){if(confirm("Delete this record?")){state.records[k].splice(i,1
 function csv(k){let m=MODULES[k],rows=[m.fields.join(",")].concat(state.records[k].map(r=>m.fields.map(f=>`"${String(r[f]??"").replaceAll('"','""')}"`).join(",")));let blob=new Blob([rows.join("\n")],{type:"text/csv"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=k+"-export.csv";a.click();toast("CSV exported")}
 function backup(){let blob=new Blob([JSON.stringify(state.records,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="nexora-erp-backup.json";a.click();toast("Backup exported")}
 render();
+// Dashboard enhancement notes
