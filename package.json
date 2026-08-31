@@ -1,0 +1,36 @@
+{
+  "name": "nexora-enterprise-erp",
+  "version": "1.0.0",
+  "description": "Nexora Enterprise ERP - Modular frontend prototype for HRMS, Finance, Inventory, CRM and more",
+  "private": true,
+  "type": "module",
+  "main": "assets/core/app.js",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "npx --yes serve -l 8000",
+    "build": "echo 'Static frontend - no build step required. Assets are ES modules.'",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "lint": "echo 'Lint placeholder - run eslint if configured'"
+  },
+  "keywords": ["erp", "enterprise", "hrms", "crm", "inventory", "frontend"],
+  "author": "Nexora Engineering",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@jest/globals": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "collectCoverageFrom": [
+      "assets/**/*.js",
+      "!assets/core/enterprise_rules_*.js"
+    ],
+    "coverageDirectory": "coverage",
+    "testMatch": ["**/tests/**/*.test.js"]
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
