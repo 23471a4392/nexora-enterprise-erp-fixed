@@ -1,0 +1,4 @@
+Nexora Enterprise ERP
+Files: 56
+Non-empty source/documentation lines: 48239
+Tests: excluded
