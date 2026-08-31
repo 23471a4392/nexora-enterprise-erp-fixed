@@ -41,3 +41,4 @@ export function truncate(str, max = 40) {
 export function padId(prefix, num, width = 4) {
   return `${prefix}-${String(num).padStart(width, "0")}`;
 }
+// CSV export polish
