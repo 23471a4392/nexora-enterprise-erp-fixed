@@ -103,3 +103,4 @@ describe("ERP Data Integrity Helpers", () => {
     expect(SAMPLE_MODULE.moduleKey).toMatch(/^[a-z_]+$/);
   });
 });
+// additional test coverage note
